@@ -26,41 +26,8 @@ Tekst ma być pod szachownicą.
             box-sizing: border-box;
         }
 
-        body {
-            width: 100%;
-            height: 100%;
-        }
 
-        /* .board {
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 50%);
-            width: 30vh;
-            height: 30vh;
-            border: 10px solid black;
-            font-size: 0;
-        }
-
-        span:first-of-type {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: red;
-            width: 50%;
-            height: 50%;
-        }
-
-        span:last-of-type {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background-color: red;
-            width: 50%;
-            height: 50%;
-        } */
-
-        /* .board {
+        .board {
             position: relative;
             top: 50%;
             left: 50%;
@@ -72,20 +39,31 @@ Tekst ma być pod szachownicą.
         }
 
         span {
-            display: inline-block;
+            position: absolute;
             width: 50%;
             height: 50%;
-            font-size: 50%;
+
         }
 
-        span:nth-of-type(1) {
+        span:first-of-type {
+            background-color: red;
+            top: 0;
+            left: 0;
+        }
+
+        span:last-of-type {
+            bottom: 0;
+            right: 0;
             background-color: red;
         }
 
-        span:nth-of-type(2) {
-            background-color: red;
-            margin-left: 50%;
-        } */
+        h1 {
+            position: relative;
+            top: 30vh;
+            left: 0;
+            text-align: center;
+
+        }
     </style>
 </head>
 
@@ -96,7 +74,7 @@ Tekst ma być pod szachownicą.
         <span></span>
         <span></span>
     </div>
-    <h1>Szachownica "inline-block"</h1>
+    <h1>Szachownica "possition absolute"</h1>
 </body>
 
 </html>
