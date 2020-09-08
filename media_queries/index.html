@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        background-color: #ddd;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    div {
+        flex-basis: 25%;
+        background-color: rgb(255, 0, 0, .5);
+    }
+
+    @media (min-width: 641px) {
+        body {
+            background-color: lightgreen
+        }
+    }
+
+    @media (min-width: 1025px) {
+        body {
+            background-color: lightsalmon;
+        }
+    }
+
+    @media (orientation: portrait) {
+        body {
+            flex-direction: column;
+        }
+
+        div {
+            flex-basis: 50%;
+        }
+    }
+
+    @media (orientation: landscape) and (max-height: 500px) {
+        div {
+            background-color: #fff;
+        }
+    }
+</style>
+
+<body>
+    <div></div>
+</body>
+
+</html>
