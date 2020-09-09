@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        text-transform: uppercase;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    nav {
+        flex-basis: 10vh;
+        background-color: #444;
+        line-height: 10vh;
+        text-align: center;
+        align-self: stretch;
+    }
+
+    header {
+        flex-basis: 25vh;
+        background-color: lightpink;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    footer {
+        height: 5vh;
+        background-color: black;
+        align-self: stretch;
+    }
+
+    section {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1200px;
+        background-color: red;
+    }
+
+    main {
+        background-color: gray;
+        flex-grow: 1;
+
+    }
+
+    aside {
+        flex-basis: 30%;
+        min-width: 280px;
+        background-color: darkgray;
+
+    }
+
+    @media (max-width: 1024px) {
+        header {
+            order: -1;
+        }
+
+        /* section {
+            flex-wrap: wrap;
+        }
+
+        main {
+            width: 100%;
+        }
+
+        aside {
+            min-width: 100%;
+        } */
+
+        section {
+            flex-direction: column;
+        }
+
+        main {
+            flex-grow: 2;
+        }
+
+        aside {
+            flex-grow: 1;
+        }
+    }
+</style>
+
+<body>
+    <nav>Nawigacja</nav>
+    <header>Header</header>
+    <section>
+        <main>Główna treść</main>
+        <aside>Kolumna</aside>
+    </section>
+    <footer>Stopka</footer>
+</body>
+
+</html>
