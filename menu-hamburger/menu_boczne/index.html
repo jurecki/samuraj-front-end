@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu 1</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-size: 12px;
+        width: 100%;
+        height: 100vh;
+    }
+
+    aside {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: black;
+        transition: .5s;
+
+    }
+
+    .burger {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 30px;
+        transition: 0.3s linear;
+    }
+
+
+    .burger:hover {
+        cursor: pointer;
+        /* transform: rotate(405deg); */
+    }
+
+    .fa {
+        display: none;
+    }
+
+    i.show {
+        display: block;
+    }
+
+    aside.show {
+        left: 0px;
+    }
+
+    /* .burger:hover+aside {
+        left: 0px;
+    } */
+
+    .wrapper.show {
+        padding-left: 300px;
+    }
+
+    .wrapper {
+        margin: 10px 80px;
+        transition: 0.3s linear;
+    }
+</style>
+
+<body>
+    <div class="wrapper active">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ipsam doloremque! Dolor facere quidem
+            doloribus maxime repellat placeat mollitia asperiores, dolorum rerum vitae facilis exercitationem doloremque
+            laborum nesciunt dicta quos!
+            Nesciunt perferendis mollitia doloremque asperiores inventore eos quas assumenda laudantium. Odit officiis
+            asperiores, delectus saepe a quisquam! Quis incidunt fugiat distinctio amet, facere fugit laboriosam,
+            ratione repudiandae minima, voluptate labore!
+            Quisquam odit eveniet eos assumenda commodi fugiat, soluta architecto minima nulla sunt sed quibusdam earum
+            voluptates iusto et debitis repudiandae dolores aspernatur veritatis harum. Similique dolorum illo quo
+            nostrum qui!
+            Aliquam optio alias modi ipsum delectus nisi quam, voluptatum unde reprehenderit recusandae culpa suscipit
+            officiis facilis cupiditate ex provident dolores omnis enim est cumque sit perferendis officia vero ab.
+            Voluptates?
+            Ex, vitae error? Voluptatem, quis cumque expedita laboriosam ex rerum sequi, totam quas cupiditate iusto
+            rem, doloremque magni explicabo possimus earum enim assumenda eveniet illum obcaecati velit! Velit, impedit
+            eum!</p>
+    </div>
+    <div class='burger'>
+        <i class="fa fa-bars show active" aria-hidden="true"></i>
+        <i class="fa fa-times active" aria-hidden="true"></i>
+    </div>
+    </button>
+    <aside class='menu active'>
+        <nav></nav>
+    </aside>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src='./script.js'></script>
+</body>
+
+</html>
