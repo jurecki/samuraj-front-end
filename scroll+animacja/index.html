@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .sekcja1 {
+        background-color: lightblue;
+        height: 100vh;
+    }
+
+    .sekcja2 {
+        background-color: gray;
+        height: 500px;
+    }
+
+    .sekcja3 {
+        background-color: red;
+        height: 1290px;
+    }
+
+    .sekcja4 {
+        background-color: lightyellow;
+        height: 150vh;
+    }
+
+    .info {
+        position: fixed;
+        bottom: -75px;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: white;
+        box-shadow: 0 0 3px 3px gray;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        text-align: center;
+        line-height: 70px;
+        transition: .8s;
+    }
+
+    .info.active {
+        bottom: 0;
+    }
+</style>
+
+<body>
+    <section class='sekcja1'></section>
+    <section class='sekcja2'></section>
+    <section class='sekcja3'></section>
+    <section class='sekcja4'></section>
+    <div class='info'> </div>
+</body>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+    $(document).on('scroll', function () {
+
+        if ($(this).scrollTop() > 200) {
+            $('div.info').addClass('active')
+            $('div.info').text('obecna pozycja scrolla to: ' + $(window).scrollTop())
+        }
+        else {
+            $('div.info').removeClass('active')
+        }
+
+
+    })
+</script>
+
+</html>
