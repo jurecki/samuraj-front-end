@@ -1,0 +1,26 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    
+nav
+    ul
+        +box-flex(row, space-around)
+        list-style-type: none
+
+        li 
+            background-color: black
+            flex-basis: 20%
+            text-align: center
+            
+            &:hover a 
+                color: black
+            a 
+                display: block
+                text-transform: uppercase
+                color: $font-color
+                text-decoration: none
+                line-height: 50px
+        
+                &:hover 
+                    background-color: red
