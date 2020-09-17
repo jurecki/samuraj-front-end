@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sekcja1 {
+            background-color: yellow;
+            height: 70vh;
+        }
+
+        .sekcja2 {
+            background-color: red;
+            height: 500px;
+        }
+
+        .sekcja3 {
+            background-color: lightblue;
+            height: 1290px;
+        }
+
+        .sekcja4 {
+            background-color: brown;
+            height: 150vh;
+        }
+
+        .info {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background-color: white;
+            text-align: center;
+            line-height: 70px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class='sekcja1'></section>
+    <section class='sekcja2'></section>
+    <section class='sekcja3'></section>
+    <section class='sekcja4'></section>
+    <div class='info'>WITAJ NA STRONIE</div>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+
+
+        // $(document).on('scroll', function () {
+        //     const scrollPossition = $(document).scrollTop()
+        //     const section1Width = $('.sekcja1').height();
+        //     const section2Width = $('.sekcja2').height();
+        //     const section3Width = $('.sekcja3').height();
+        //     const section4Width = $('.sekcja4').height();
+
+        //     const widthFormStartSection1 = $('.sekcja1').offset().top;
+        //     const widthFormStartSection2 = $('.sekcja2').offset().top;
+        //     const widthFormStartSection3 = $('.sekcja3').offset().top;
+        //     const widthFormStartSection4 = $('.sekcja4').offset().top;
+
+
+        //     if (scrollPossition < section1Width) {
+        //         $('.info').text('Sekcja1')
+        //     } else if (scrollPossition < section2Width + widthFormStartSection2) {
+        //         $('.info').text('Sekcja2')
+        //     } else if (scrollPossition < section3Width + widthFormStartSection3) {
+        //         $('.info').text('Sekcja3')
+        //     } else {
+        //         $('.info').text('Sekcja4')
+        //     }
+        // })
+
+        window.addEventListener('scroll', function () {
+            const scrollPossition = window.scrollY;
+
+            const section1Width = document.querySelector('.sekcja1').clientHeight;
+            const section2Width = document.querySelector('.sekcja2').clientHeight;
+            const section3Width = document.querySelector('.sekcja3').clientHeight;
+            const section4Width = document.querySelector('.sekcja4').clientHeight;
+
+            const widthFormStartSection1 = document.querySelector('.sekcja1').offsetTop;
+            const widthFormStartSection2 = document.querySelector('.sekcja2').offsetTop;
+            const widthFormStartSection3 = document.querySelector('.sekcja3').offsetTop;
+
+            if (scrollPossition < section1Width) {
+                document.querySelector('.info').textContent = 'Sekcja1'
+            } else if (scrollPossition < section2Width + widthFormStartSection2) {
+                document.querySelector('.info').textContent = 'Sekcja2'
+            } else if (scrollPossition < section3Width + widthFormStartSection3) {
+                document.querySelector('.info').textContent = 'Sekcja3'
+            } else {
+                document.querySelector('.info').textContent = 'Sekcja4'
+            }
+        }
+        )
+
+    </script>
+</body>
+
+</html>
